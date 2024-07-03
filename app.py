@@ -32,7 +32,7 @@ if execute:
 
         try:
             # Make a request to the ChatGPT API
-            response1 = openai.ChatCompletion.create(
+            response1 = openai.Completion.create(
                 model="gpt-3.5-turbo",
                 messages=messages1,
                 temperature=1,
@@ -42,7 +42,7 @@ if execute:
                 presence_penalty=0
             )
 
-            response2 = openai.ChatCompletion.create(
+            response2 = openai.Completion.create(
                 model="gpt-3.5-turbo",
                 messages=messages2,
                 temperature=1,
