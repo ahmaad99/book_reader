@@ -4,9 +4,8 @@ from tqdm import tqdm
 from dotenv import load_dotenv
 import streamlit as st
 import os
-# Set your OpenAI API key
-load_dotenv()
-openai.api_key = os.getenv('OPENAI_API_KEY')
+
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 word = st.text_input("Enter a word or expression:")
 
 execute = st.button("Execute")
